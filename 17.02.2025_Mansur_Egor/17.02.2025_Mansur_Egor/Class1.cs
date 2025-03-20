@@ -2,27 +2,22 @@
 
 public class Class1
 {
-    internal static double Add(int v1, int v2)
+    // Методы для работы с int
+    public static int Add(int a, int b) => a + b;
+
+    public static int Subtract(int a, int b) => a - b;
+
+    public static int Multiply(int a, int b) => a * b;
+
+    public static double Divide(int a, int b)
     {
-        throw new NotImplementedException();
+        if (b == 0)
+            throw new DivideByZeroException("Деление на ноль невозможно.");
+        return (double)a / b;
     }
 
-    internal static double Divide(int v1, int v2)
-    {
-        throw new NotImplementedException();
-    }
-
-    internal static double Multiply(int v1, int v2)
-    {
-        throw new NotImplementedException();
-    }
-
-    internal static double Subtract(int v1, int v2)
-    {
-        throw new NotImplementedException();
-    }
-
-public static double Add(double a, double b) => a + b;
+    // Методы для работы с double
+    public static double Add(double a, double b) => a + b;
 
     public static double Subtract(double a, double b) => a - b;
 
@@ -35,6 +30,10 @@ public static double Add(double a, double b) => a + b;
         return a / b;
     }
 
+    // Метод округления числа
+    public static double RoundNumber(double value) => Math.Round(value);
+
+    // Метод для преобразования строки в int
     public static int ParseInteger(string input)
     {
         if (!int.TryParse(input, out int result))
@@ -42,5 +41,10 @@ public static double Add(double a, double b) => a + b;
         return result;
     }
 
-
+    // Асинхронный метод для возврата результата с задержкой
+    public static async Task<int> GetDelayedResultAsync(int value)
+    {
+        await Task.Delay(1000); // Искусственная задержка
+        return value;
+    }
 }

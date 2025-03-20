@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\17.02.2025_Mansur_Egor\17.02.2025_Mansur_Egor.csproj" />
+    <ProjectReference Include="..\17.02.2025_Mansur_Egor\17.03.2025_Mansur_Egor.csproj" />
   </ItemGroup>
 
   <ItemGroup>
